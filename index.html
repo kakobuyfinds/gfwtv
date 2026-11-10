@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#faf4e8">
+  <title>OKEYHAUL spreadsheet | Funde und Kaufcheck auf Deutsch</title>
+  <meta name="description" content="OKEYHAUL spreadsheet auf Deutsch. Zehn Kategorien für Mode und Accessoires sowie praktische Tipps zu Produktlinks, Größen, QC-Fotos und Versandkosten.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="OKEYHAUL spreadsheet | Funde und Kaufcheck auf Deutsch">
+  <meta property="og:description" content="Zehn Modekategorien entdecken und Produktlinks, Maße, QC-Fotos und Versand vor der Bestellung prüfen.">
+  <meta property="og:image" content="https://es.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolso-speedy-25-con-bandolera--M46977_PM1_Worn%20view.png?hei=600&amp;wid=600">
+  <meta property="og:image:alt" content="Louis Vuitton Speedy 25 aus Monogram-Canvas zu beigem Mantel und Jeans">
+  <style>
+    :root{color-scheme:light;--paper:#faf4e8;--ink:#261d19;--red:#822a33;--muted:#60514a;--line:#cbbbab;--card:#fffaf2}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.12}
+    h1,h2{font-family:Georgia,serif;font-weight:500;letter-spacing:-.035em}
+    h1{font-size:clamp(2.35rem,7.7vw,6rem);overflow-wrap:anywhere;margin:.4rem 0 .75rem}
+    h2{font-size:clamp(1.65rem,4vw,2.75rem)}
+    h3{font-size:1.15rem}
+    a{color:inherit;text-underline-offset:.18em}
+    :focus-visible{outline:3px solid var(--red);outline-offset:4px}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    .mast{border-bottom:1px solid var(--line)}
+    .mast .wrap,.foot .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1rem;padding-block:.85rem}
+    .brand{font-weight:800}
+    .eyebrow{font-size:.8rem;font-weight:800;color:var(--red);letter-spacing:.08em;text-transform:uppercase}
+    .intro{padding-block:clamp(1.6rem,4vw,3rem) 1.35rem}
+    .intro p:last-child{max-width:69ch;color:var(--muted)}
+    .spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.07fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .directory{padding:1.2rem clamp(.9rem,3vw,2rem) 1.2rem 0}
+    .directory ul{list-style:none;margin:1rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:.85rem}
+    .directory a{display:flex;align-items:center;gap:.52rem;min-height:3rem;padding:.25rem .1rem;border-top:1px solid var(--line);font-weight:650;text-decoration:none}
+    .directory a:hover,.directory a:focus-visible{color:var(--red);text-decoration:underline}
+    .number{font-size:.76rem;font-variant-numeric:tabular-nums;color:var(--red)}
+    .cover{position:relative;display:grid;align-content:end;isolation:isolate;overflow:hidden;min-height:19rem;background:#e8d9c9}
+    .cover img{position:absolute;z-index:-1;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+    .cover figcaption{justify-self:start;margin:1rem;padding:.4rem .65rem;background:var(--card);font-size:.83rem;font-weight:650}
+    .guide,.gallery,.reading,.faq{padding-block:clamp(1.5rem,4vw,2.75rem);border-bottom:1px solid var(--line)}
+    .steps,.tiles,.articles{display:grid;gap:1rem;margin:1.15rem 0 0}
+    .steps{grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:0;counter-reset:check}
+    .steps li{counter-increment:check;border-top:2px solid var(--red);padding:.65rem 0}
+    .steps li::before{content:"0" counter(check);display:block;color:var(--red);font-size:.8rem;font-weight:800;margin-bottom:.3rem}
+    .steps p,.articles p{margin-top:.5rem}
+    .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .tiles figure{background:var(--card);border:1px solid var(--line)}
+    .tiles img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#f0e7da}
+    .tiles figcaption{font-size:.9rem;font-weight:700;padding:.55rem .65rem}
+    .gallery>p{margin-top:.45rem;color:var(--muted)}
+    .articles{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .articles article{background:var(--card);border:1px solid var(--line);padding:clamp(.9rem,3vw,1.45rem)}
+    .articles .eyebrow{margin:0 0 .4rem}
+    .faq details{border-bottom:1px solid var(--line);max-width:52rem}
+    .faq h2{margin-bottom:.6rem}
+    summary{cursor:pointer;padding:.7rem 0;font-weight:750}
+    details p{padding:0 0 .85rem;max-width:66ch}
+    .foot p{font-size:.9rem;color:var(--muted)}
+    @media(max-width:46rem){
+      .spread,.articles,.steps{grid-template-columns:1fr}
+      .directory{padding-right:0}
+      .cover{min-height:clamp(15rem,65vw,25rem)}
+      .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "inLanguage": "de",
+        "name": "OKEYHAUL spreadsheet | Funde und Kaufcheck auf Deutsch",
+        "description": "OKEYHAUL spreadsheet auf Deutsch. Zehn Kategorien für Mode und Accessoires sowie praktische Tipps zu Produktlinks, Größen, QC-Fotos und Versandkosten.",
+        "about": {"@type": "Thing", "name": "OKEYHAUL spreadsheet"}
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "de",
+        "name": "Fragen zum OKEYHAUL spreadsheet",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist ein OKEYHAUL spreadsheet?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Eine Übersicht, mit der du Produktlinks nach Kategorien sammeln und Angebote vergleichen kannst. Maßgeblich für die Auswahl ist das konkrete Händlerangebot."}
+          },
+          {
+            "@type": "Question",
+            "name": "Was zeigen QC-Fotos?",
+            "acceptedAnswer": {"@type": "Answer", "text": "QC-Fotos zeigen sichtbare Merkmale wie Nähte, Etiketten und Gebrauchsspuren. Für eine verlässliche Größenprüfung brauchst du ein Foto mit Maßband. Für eine Echtheitsprüfung brauchst du zusätzliche Nachweise."}
+          },
+          {
+            "@type": "Question",
+            "name": "Was mache ich, wenn ein Produktlink nicht mehr funktioniert?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Suche nach Modellnummer und Farbvariante. Vergleiche beim neuen Angebot die Artikelbilder und die Größentabelle mit deinen Notizen, bevor du es in die Auswahlliste übernimmst."}
+          },
+          {
+            "@type": "Question",
+            "name": "Wie vergleiche ich Versandkosten nach Deutschland, Österreich oder in die Schweiz?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Vergleiche Angebote für dasselbe Zielland mit denselben Paketmaßen und demselben Gewicht. Prüfe die Abrechnungsgrundlage sowie mögliche Gebühren und Einfuhrkosten für deine konkrete Sendung."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!--
+    Redaktionelle Recherche: Die Bing-Ergebnisseite zeigte keine organischen
+    Treffer. Für die Themenauswahl wurden zehn anderweitig gefundene Websites
+    ausgewertet. Die Reihenfolge folgt der redaktionellen Auswahl.
+    https://okey-haul.com/spreadsheet/
+    https://okeyhaul.net/
+    https://okeyhaul.org/
+    https://lovegobuy.tips/okeyhaul-spreadsheet
+    https://kako-sheet.org/okeyhaul-spreadsheet
+    https://gtbuy.tips/okeyhaul-spreadsheet
+    https://kakobuyde.net/okeyhaul-spreadsheet
+    https://okeyhaul.shop/okeyhaul-news/what-is-okeyhaul-spreadsheet/
+    https://usfanskakobuy.com/okeyhaul-spreadsheet
+    https://repgalaxy.tips/okeyhaul-spreadsheet
+
+    Empfohlene Nebenkeywords: OKEYHAUL Produktlinks, OKEYHAUL Größenvergleich,
+    OKEYHAUL QC-Fotos, OKEYHAUL Versandkosten.
+    Longtail-Themen im Text: Produktlinks nach Kategorien sammeln;
+    Händlerangebote vergleichen; Artikelnummer und Farbvariante abgleichen;
+    verfügbare Größe prüfen; Produktlink funktioniert nicht mehr;
+    Größentabelle in Zentimetern lesen; QC-Fotos mit Maßband;
+    Nähte auf QC-Fotos prüfen; Etiketten auf QC-Fotos erkennen;
+    Fußlänge im Stehen messen; Innenlänge der Sneaker prüfen;
+    herausnehmbare Einlegesohle messen; Brustweite von Achsel zu Achsel messen;
+    Rückenlänge und Ärmellänge vergleichen; Bundweite bei Hosen prüfen;
+    Innenbeinlänge vergleichen; Nahaufnahme der Sohlenkante;
+    Rückseite einer Cap prüfen; Reißverschluss auf Funktion prüfen;
+    Schmuck bei diffusem Licht fotografieren; Inlandsversand getrennt erfassen;
+    Einzelpakete mit einem gebündelten Paket vergleichen;
+    tatsächliches Gewicht und Volumengewicht vergleichen;
+    Versandkosten für Deutschland, Österreich und die Schweiz vergleichen.
+  -->
+<link rel="canonical" href="https://kakobuyfinds.github.io/gfwtv/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+      <span class="eyebrow">Einkaufsjournal · Mode und Accessoires</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="intro">
+      <p class="eyebrow">Produktrecherche auf Deutsch</p>
+      <h1>OKEYHAUL spreadsheet</h1>
+      <p>Ein OKEYHAUL spreadsheet bündelt Produktlinks für die Vorauswahl. Dieser Einkaufsführer hilft dir, passende Kategorien zu finden und die genaue Variante, Maße und sichtbare Verarbeitung zu prüfen. Die Kategorieübersicht führt zum Katalog von HipobuyFind.</p>
+    </div>
+
+    <div class="spread">
+      <nav class="directory" aria-labelledby="rubriken">
+        <h2 id="rubriken">Kategorien entdecken</h2>
+        <ul>
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span class="number" aria-hidden="true">01</span> Schuhe</a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span class="number" aria-hidden="true">02</span> Hoodies und Pullover</a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span class="number" aria-hidden="true">03</span> T-Shirts</a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span class="number" aria-hidden="true">04</span> Jacken</a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span class="number" aria-hidden="true">05</span> Hosen und Shorts</a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span class="number" aria-hidden="true">06</span> Caps und Mützen</a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span class="number" aria-hidden="true">07</span> Bekleidungssets</a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span class="number" aria-hidden="true">08</span> Unterwäsche</a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span class="number" aria-hidden="true">09</span> Trikots</a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span class="number" aria-hidden="true">10</span> Accessoires</a></li>
+        </ul>
+      </nav>
+      <figure class="cover">
+        <img src="https://es.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolso-speedy-25-con-bandolera--M46977_PM1_Worn%20view.png?hei=600&amp;wid=600" width="600" height="600" loading="eager" fetchpriority="high" alt="Louis Vuitton Speedy 25 aus Monogram-Canvas zu beigem Mantel und Jeans">
+        <figcaption>Louis Vuitton Speedy 25 · Stilreferenz</figcaption>
+      </figure>
+    </div>
+
+    <section class="guide" aria-labelledby="kaufcheck">
+      <h2 id="kaufcheck">Der Kaufcheck in drei Schritten</h2>
+      <ol class="steps">
+        <li>
+          <h3>Produktlink und Variante abgleichen</h3>
+          <p>Öffne den Händlerlink und notiere Artikelnummer, Farbvariante und verfügbare Größe. Wenn das Vorschaubild mehrere Farben zeigt, prüfe nach der Auswahl, welche Bilder zur gewählten Variante gehören.</p>
+        </li>
+        <li>
+          <h3>Größentabelle und QC-Fotos lesen</h3>
+          <p>Vergleiche die Maße in Zentimetern mit einem gut sitzenden Stück. Suche auf den Qualitätskontrollfotos (QC-Fotos) nach Etikett, Nähten und der genauen Messstelle. Bitte bei unklaren Details um eine Nahaufnahme.</p>
+        </li>
+        <li>
+          <h3>Gesamtkosten je Sendung erfassen</h3>
+          <p>Halte Artikelpreis, Inlandsversand, Servicegebühr und internationalen Versand getrennt fest. Vergleiche bei mehreren Artikeln Einzelpakete mit dem gebündelten Paket. Prüfe dazu die endgültigen Paketmaße und das Abrechnungsgewicht.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="gallery" aria-labelledby="stil">
+      <h2 id="stil">Vier Details für den Vergleich</h2>
+      <p>Die Markenbilder dienen als Stilreferenzen. Ob ein ähnlicher Artikel verfügbar ist, steht im jeweiligen Händlerangebot.</p>
+      <div class="tiles">
+        <figure>
+          <img src="https://www.mita-sneakers.co.jp/cdn/shop/files/cw2288-111-r2_1200x1200.jpg?v=1765857979" width="1200" height="1200" loading="lazy" decoding="async" alt="Weißer Nike Air Force 1 ’07 mit weißem Swoosh und perforierter Zehenpartie">
+          <figcaption>Nike · Sneakerform</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1781520304/872632_4HBJO_9666_006_100_0000_Light-gg-baseball-hat-with-web.jpg" width="490" height="490" loading="lazy" decoding="async" alt="Sandfarbene Gucci-Baseballcap mit GG-Muster und grün-rotem Webstreifen">
+          <figcaption>Gucci · Schirm und Besatz</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/bracelet-clic-h--700001F%204P-front-1-300-0-1000-1000_b.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Emaillierter Hermès-Clic-H-Armreif mit goldfarbenem H-Verschluss">
+          <figcaption>Hermès · Armreifverschluss</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/LOOK_F_23_3_LOOK_661_E06?%24r2x3_raw%24=&amp;bfc=on&amp;crop=568%2C0%2C1864%2C2000&amp;hei=960&amp;qlt=85&amp;scale=0.4798&amp;wid=640" width="640" height="960" loading="lazy" decoding="async" alt="Dior-Steppjacke mit schwarzer Kapuze und kontrastierendem Oblique-Muster von hinten">
+          <figcaption>Dior · Steppung und Muster</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="reading" aria-labelledby="artikel">
+      <h2 id="artikel">Zwei Praxisartikel für deine Auswahlliste</h2>
+      <div class="articles">
+        <article>
+          <p class="eyebrow">Passform</p>
+          <h3>Schuhgröße und Kleidungsmaße richtig vergleichen</h3>
+          <p>Miss beide Füße im Stehen und nutze den längeren Wert für die Größentabelle des Modells. Gibt ein Händler die Innenlänge der Sneaker an, kläre, ob damit die herausnehmbare Einlegesohle gemeint ist. Fußlänge und Einlegesohlenlänge sind verschiedene Maße.</p>
+          <p>Lege für ein T-Shirt oder einen Hoodie ein gut sitzendes Stück flach hin. Miss Brustweite von Achsel zu Achsel, Rückenlänge und Ärmellänge nach derselben Methode wie der Händler. Bei Hosen helfen Bundweite, Innenbeinlänge und der Hinweis, ob der Bund gedehnt gemessen wurde.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Fotos und Versand</p>
+          <h3>Eine Fundliste bis zum Paket nachvollziehbar halten</h3>
+          <p>Erfasse für jeden Fund Händlerlink, Modellnummer, gewählte Größe und Prüfdatum. Halte offene Fotofragen fest, etwa zur Sohlenkante, zur Rückseite einer Cap oder zur Funktion eines Reißverschlusses. Bitte bei spiegelndem Schmuck um eine zweite Aufnahme bei diffusem Licht.</p>
+          <p>Bei einer dicken Jacke oder einem Schuhkarton kann die Paketgröße den Versandvergleich beeinflussen. Frage vor dem Versand nach dem tatsächlichen Gewicht und dem Volumengewicht. Vergleiche für dein Zielland auch Sendungsverfolgung, Paketversicherung und die Bedingungen für eine Rücksendung.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="fragen">
+      <h2 id="fragen">Fragen zum OKEYHAUL spreadsheet</h2>
+      <details open>
+        <summary>Was ist ein OKEYHAUL spreadsheet?</summary>
+        <p>Eine Übersicht, mit der du Produktlinks nach Kategorien sammeln und Angebote vergleichen kannst. Maßgeblich für die Auswahl ist das konkrete Händlerangebot.</p>
+      </details>
+      <details>
+        <summary>Was zeigen QC-Fotos?</summary>
+        <p>QC-Fotos zeigen sichtbare Merkmale wie Nähte, Etiketten und Gebrauchsspuren. Für eine verlässliche Größenprüfung brauchst du ein Foto mit Maßband. Für eine Echtheitsprüfung brauchst du zusätzliche Nachweise.</p>
+      </details>
+      <details>
+        <summary>Was mache ich, wenn ein Produktlink nicht mehr funktioniert?</summary>
+        <p>Suche nach Modellnummer und Farbvariante. Vergleiche beim neuen Angebot die Artikelbilder und die Größentabelle mit deinen Notizen, bevor du es in die Auswahlliste übernimmst.</p>
+      </details>
+      <details>
+        <summary>Wie vergleiche ich Versandkosten nach Deutschland, Österreich oder in die Schweiz?</summary>
+        <p>Vergleiche Angebote für dasselbe Zielland mit denselben Paketmaßen und demselben Gewicht. Prüfe die Abrechnungsgrundlage sowie mögliche Gebühren und Einfuhrkosten für deine konkrete Sendung.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Unabhängiger Einkaufsführer mit Katalogverweisen zu HipobuyFind.</p>
+      <a class="brand" href="https://www.hipobuyfind.com">Katalog auf HipobuyFind öffnen</a>
+    </div>
+  </footer>
+</body>
+</html>
